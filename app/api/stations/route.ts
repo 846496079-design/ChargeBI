@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { all } from "@/lib/data/db";
 
+export const runtime = "nodejs";
+
 export async function GET() {
   const stations = all(`
 SELECT s.station_id, s.station_name, s.region_id, r.region_name, s.map_x, s.map_y, s.lng, s.lat, s.station_type, s.status,

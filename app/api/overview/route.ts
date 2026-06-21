@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { all, get } from "@/lib/data/db";
 
+export const runtime = "nodejs";
+
 export async function GET() {
   const kpi = get<{
     orders: number;
@@ -30,4 +32,3 @@ ORDER BY revenue DESC`);
 
   return NextResponse.json({ kpi, regions });
 }
-

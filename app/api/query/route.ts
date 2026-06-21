@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { answerQuestion } from "@/lib/query/orchestrator";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
